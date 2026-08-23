@@ -1,0 +1,22 @@
+# Maven
+target/
+*.log
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.ipr
+*.iws
+out/
+
+# Allure
+.allure/
+allure-results/
+allure-report/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Mobile app binaries (APK кладемо локально, у репо не пушимо)
+apps/*.apk

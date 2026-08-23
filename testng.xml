@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<!--
+  Загальний набір тестів Triad QA.
+  Три групи — web / api / mobile. Поки пакети порожні: наповнюємо по фазах.
+  Запуск окремої групи: закоментуй зайві <test> або зроби окремий xml.
+-->
+<suite name="Triad QA Suite" verbose="1">
+
+    <test name="Web UI (Swag Labs)">
+        <packages>
+            <package name="tests.ui"/>
+        </packages>
+    </test>
+
+    <test name="API (restful-booker)">
+        <packages>
+            <package name="tests.api"/>
+        </packages>
+    </test>
+
+    <!-- Mobile вмикаємо на Фазі 3, коли буде Appium + емулятор
+    <test name="Mobile (My Demo App)">
+        <packages>
+            <package name="tests.mobile"/>
+        </packages>
+    </test>
+    -->
+
+</suite>
