@@ -24,4 +24,10 @@ public class LoginPage extends PageTools {
         type("id", password, passwordField);
         click("id", loginButton);
     }
+    private final String errorMessage = "[data-test='error']";   // css-локатор
+
+    public String getErrorText() {
+        return getText("css", errorMessage);
+    }
+
 }
