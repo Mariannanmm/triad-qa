@@ -149,4 +149,19 @@ public class PageTools {
                 throw new IllegalArgumentException("Invalid locator Type: " + locatorType);
         }
     }
+    public void selectByValue(String locatorType, String value, String locator, Object... args) {
+        switch (locatorType) {
+            case "css":
+                $(byCssSelector(locatorFormatter(locator, args))).selectOptionByValue(value);
+                break;
+            case "id":
+                $(byId(locatorFormatter(locator, args))).selectOptionByValue(value);
+                break;
+            case "xpath":
+                $(byXpath(locatorFormatter(locator, args))).selectOptionByValue(value);
+                break;
+            default:
+                throw new IllegalArgumentException("Invalid locator Type: " + locatorType);
+        }
+    }
 }

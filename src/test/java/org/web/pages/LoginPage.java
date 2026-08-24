@@ -1,5 +1,6 @@
 package org.web.pages;
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Selenide;
 import org.helpers.PageTools;
 
@@ -28,6 +29,9 @@ public class LoginPage extends PageTools {
 
     public String getErrorText() {
         return getText("css", errorMessage);
+    }
+    public void checkLoginPageOpened() {
+        should("id", Condition.visible, loginButton);   // кнопка Login знову видима
     }
 
 }

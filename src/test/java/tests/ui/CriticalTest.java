@@ -10,6 +10,7 @@ import static org.web.pages.CheckoutPage.checkoutPage;
 import static org.web.pages.CompletePage.completePage;
 import static org.web.pages.LoginPage.loginPage;
 import static org.web.pages.OverviewPage.overviewPage;
+import static org.web.pages.ProductDetailPage.productDetailPage;
 import static org.web.pages.ProductsPage.productsPage;
 
 public class CriticalTest extends TestBase {
@@ -40,4 +41,14 @@ public class CriticalTest extends TestBase {
         overviewPage.clickFinishButton();
         Assert.assertEquals(completePage.getCompleteHeader(), "Thank you for your order!");
     }
+
+    @Test
+    public void checkHomeItemMatchesDetail() {
+        loginPage.open();
+        loginPage.login(TestData.STANDARD_USER, TestData.PASSWORD);
+        String listName = productsPage.getFirstItemName();
+        productsPage.openFirstItem();
+        Assert.assertEquals(productDetailPage.getName(), listName);
+    }
+
 }
