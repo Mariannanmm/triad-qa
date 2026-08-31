@@ -9,13 +9,10 @@ import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
 
 /**
- * Specifications — стиль вчителя (як у carsAPI).
  * Ціль API-частини: restful-booker.
- *
  * requestSpecification(url)  -> базовий URI + JSON + Allure-фільтр
  * responseSpecification(code)-> очікуваний статус-код
  * getSpecifications(req,resp)-> ставить обидві специфікації глобально
- *
  * Далі в тестах: getSpecifications(requestSpecification("/booking"),
  *                                  responseSpecification(200));
  * і потім given().body(...).when().post().then()... — методи без аргументів,
@@ -29,7 +26,7 @@ public class Specifications {
         return new RequestSpecBuilder()
                 .setBaseUri(BOOKER_URL + path)
                 .setContentType(ContentType.JSON)
-                .setAccept(ContentType.JSON)
+                .setAccept("application/json")
                 .addFilter(new AllureRestAssured())
                 .build();
     }

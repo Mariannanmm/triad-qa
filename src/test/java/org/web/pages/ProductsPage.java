@@ -20,7 +20,7 @@ public class ProductsPage extends PageTools {
 
 
     public String getTitle() {
-        return getText("css", pageTitle);   // прочитати текст заголовка
+        return getText("css", pageTitle);
     }
     public void clickAddBackpackButton() {
         click("id", addBackpackButton);

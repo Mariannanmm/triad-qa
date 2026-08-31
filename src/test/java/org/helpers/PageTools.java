@@ -11,7 +11,7 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
 
 /**
- * PageTools — базовий клас дій для Page Object'ів (стиль вчителя).
+ * PageTools — базовий клас дій для Page Object'ів.
  * Локатор передається двома частинами: тип ("id"/"xpath"/"name"/"css")
  * і сам рядок-локатор. Object... args дозволяє динамічні локатори через %s.
  */

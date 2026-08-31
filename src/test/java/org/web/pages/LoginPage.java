@@ -6,16 +6,13 @@ import org.helpers.PageTools;
 
 public class LoginPage extends PageTools {
 
-    // --- Singleton (форма вчителя) ---
     public static final LoginPage loginPage = new LoginPage();
     private LoginPage() {}
 
-    // --- Локатори (усі три поля мають id) ---
     private final String usernameField = "user-name";
     private final String passwordField = "password";
     private final String loginButton   = "login-button";
 
-    // --- Дії ---
     public void open() {
         Selenide.open("/");   // baseUrl (saucedemo.com) заданий у TestBase
     }

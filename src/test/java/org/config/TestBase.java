@@ -10,10 +10,7 @@ import org.testng.annotations.BeforeClass;
 /**
  * TestBase — базовий клас для Web UI тестів (Swag Labs / saucedemo.com).
  * Налаштування браузера, baseUrl, headless-режим і чистка стану між тестами.
- *
- * Стиль вчителя: конфіг у @BeforeClass, Allure-listener на Selenide,
  * @AfterMethod чистить cookies/localStorage, щоб тести не залежали один від одного.
- *
  * Headless вмикається через -Dheadless=true (зручно для CI).
  */
 public abstract class TestBase {
